@@ -1,16 +1,20 @@
 // User function Template for Java
 
 class Solution {
-    int countZeroes(int[] arr) {
-        int count = 0;
-        for(int i = arr.length-1 ; i>=0 ; i--){
-            if(arr[i] == 0){
-                count++;
+     int countZeroes(int[] arr){
+        int start = 0;
+        int end = arr.length-1;
+        int idx = arr.length;
+        while(start<=end){
+            int mid = start+(end-start)/2;
+            if(arr[mid] == 1){
+                start = mid+1;
             }
-            else{
-                break;
+            else if(arr[mid]==0){
+                idx = mid;
+                end = mid-1;
             }
         }
-        return count;
+        return (arr.length-idx);
     }
 }
