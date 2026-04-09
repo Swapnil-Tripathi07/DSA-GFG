@@ -3,7 +3,7 @@ class Solution {
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int start = nums[i]
+            int start = nums[i];
 
             // move while consecutive
             while (i < nums.length - 1 && nums[i] + 1 == nums[i + 1]) {
