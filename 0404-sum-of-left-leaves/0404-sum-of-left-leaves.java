@@ -19,9 +19,7 @@ class Solution {
         
         int sum = 0;
         
-        // Check left child
         if (root.left != null) {
-            // If left child is leaf
             if (root.left.left == null && root.left.right == null) {
                 sum += root.left.val;
             } else {
@@ -29,7 +27,6 @@ class Solution {
             }
         }
         
-        // Always check right subtree
         sum += sumOfLeftLeaves(root.right);
         
         return sum;
