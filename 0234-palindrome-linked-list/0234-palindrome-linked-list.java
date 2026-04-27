@@ -19,9 +19,8 @@ class Solution {
         }
         current = head;
         while(!stack.isEmpty() && current!=null){
-            if(current.val == stack.peek()){
+            if(current.val == stack.pop()){
                 current = current.next;
-                stack.pop();
             }
             else{
                 flag = false;
