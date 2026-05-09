@@ -24,15 +24,12 @@ class Solution {
         if(node==null){
             return;
         }
-        if(node!=null){
-            count[1]++;
-        }
-        if(node.left == null && node.right == null){
+        count[1]++;
+        if(node.left==null && node.right==null){
             count[0] = Math.max(count[0],count[1]);
         }
         maxDepth(node.left,count);
-        maxDepth(node.right,count);
+        maxDepth(node.right , count);
         count[1]--;
-
     }
 }
